@@ -45,7 +45,7 @@ This class has a `main()` method, which lists the tasks performed by the program
 ```java
 public class Store {
   public static void main(String[] args) {
-    
+
   }
 }
 ```
@@ -84,11 +84,11 @@ public class Car {
 
   public static void main(String[] args) {
     /*
-    invoke a constructor using 
+    invoke a constructor using
     'new', the name, and parentheses:
     new Car()
     */
-    Car ferrari = new Car(); 
+    Car ferrari = new Car();
   }
 }
 ```
@@ -100,16 +100,16 @@ This is the first time we’ve called a method that we’ve also defined. `main(
 
 ```java
 public class Store {
-  
+
   // new method: constructor!
   public Store() {
     System.out.println("I am inside the constructor method.");
   }
-  
+
   // main method is where we create instances!
   public static void main(String[] args) {
     System.out.println("Start of the main method.");
-    
+
     // create the instance below
     Store lemonadeStand = new Store();
     // print the instance below
@@ -135,7 +135,7 @@ public class Car {
   String color;
 
   public Car() {
-    /* 
+    /*
     instance fields available in
     scope of constructor method
     */
@@ -151,19 +151,19 @@ public class Car {
 public class Store {
   // declare instance fields here!
   String productType;
-  
+
   // constructor method
   public Store() {
     System.out.println("I am inside the constructor method.");
   }
-  
+
   // main method
   public static void main(String[] args) {
     System.out.println("This code is inside the main method.");
-    
+
     // Instance of Store class, lemonadeStand object
     Store lemonadeStand = new Store();
-    
+
     System.out.println(lemonadeStand);
   }
 }
@@ -173,16 +173,16 @@ public class Store {
 public class Store {
   // instance fields
   String productType;
-  
+
   // constructor method
   public Store() {
-    
+
   }
-  
+
   // main method
   public static void main(String[] args) {
-    
-    
+
+
   }
 }
 ```
@@ -216,7 +216,7 @@ public class Car {
 
 The type of the value given to the invocation must match the type declared by the parameter.
 
-The object, `ferrari`, holds the state of color as an instance field referencing the value `"red"`. 
+The object, `ferrari`, holds the state of color as an instance field referencing the value `"red"`.
 
 We access the value of this field with the dot operator `.`:
 
@@ -234,17 +234,17 @@ ferrari.color;
 public class Store {
   // instance fields
   String productType;
-  
+
   // constructor method
   public Store(String product) {
     productType = product;
   }
-  
+
   // main method
   public static void main(String[] args) {
     Store lemonadeStand = new Store("lemonade");
     System.out.println(lemonadeStand.productType);
-    
+
   }
 }
 ```
@@ -277,4 +277,37 @@ public class Car {
     // 27
   }
 }
+```
+
+### Classes: Review 8/8
+
+Java is an object-oriented programming language where every program has at least one class. Programs are often built from many classes and objects, which are the instances of a class.
+
+Classes define the state and behavior of their instances. Behavior comes from methods defined in the class. State comes from instance fields declared inside the class.
+
+```java
+public class Dog {
+    String breed;
+    boolean hasOwner;
+    int age;
+
+    public Dog(String dogBreed, boolean dogOwned, int dogYears) {
+      System.out.println("Constructor invoked!");
+      breed = dogBreed;
+      hasOwner = dogOwned;
+      age = dogYears;
+    }
+
+    public static void main(String[] args) {
+      System.out.println("Main method started");
+      Dog fido = new Dog("poodle", false, 4);
+      Dog nunzio = new Dog("shiba inu", true, 12);
+      boolean isFidoOlder = fido.age > nunzio.age;
+      int totalDogYears = nunzio.age + fido.age;
+      System.out.println("Two dogs created: a " + fido.breed + " and a " + nunzio.breed);
+      System.out.println("The statement that fido is an older dog is: " + isFidoOlder);
+      System.out.println("The total age of the dogs is: " + totalDogYears);
+      System.out.println("Main method finished");
+    }
+  }
 ```
