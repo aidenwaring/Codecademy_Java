@@ -39,7 +39,7 @@ public class Order {
     if (isFilled) {
       System.out.println("Shipping");
     } else {
-      System.out.println("Order not ready");
+      System.out.println("src.Order not ready");
     }
     
   }
@@ -48,8 +48,6 @@ public class Order {
 ```
 
 ### If-Else 3/5
-
-
 
 ```java
   public double calculateShipping() {

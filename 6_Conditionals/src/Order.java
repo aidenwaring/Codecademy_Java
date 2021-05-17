@@ -1,3 +1,5 @@
+package src;
+
 public class Order {
     boolean isFilled;
     double billAmount;
@@ -18,7 +20,7 @@ public class Order {
       if (isFilled) {
         System.out.println("Shipping");
       } else {
-        System.out.println("Order not ready");
+        System.out.println("src.Order not ready");
       }
       
       double shippingCost = calculateShipping();
