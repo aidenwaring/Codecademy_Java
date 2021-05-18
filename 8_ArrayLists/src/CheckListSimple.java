@@ -6,11 +6,6 @@ class CheckListSimple {
 
     public static void main(String[] args) {
 
-        //ArrayList<String> toDoList;
-
-        //toDoList = new ArrayList<String>();
-
-        //Declaration and initialisation
         ArrayList<String> toDoList = new ArrayList<String>();
         String toDo1 = "Water plants";
         String toDo2 = "Feed the dog";
