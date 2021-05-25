@@ -15,6 +15,8 @@ class CheckListSimple {
         toDoList.add(toDo2);
         toDoList.add(toDo3);
 
+//      toDoList.add("Most things now make me smile");
+
         System.out.println(toDoList);
 
 

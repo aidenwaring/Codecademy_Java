@@ -104,3 +104,79 @@ assortment.add(ferrari); // reference to Car
 ```
 
 In this case, the items stored in this ArrayList will be considered Objects. As a result, they won’t have access to some of their methods without doing some fancy casting. Although this type of ArrayList is allowed, using an ArrayList that specifies its type is preferred.
+
+## Accessing an Index
+
+With arrays, we can use bracket notation to access a value at a particular index:
+
+```java
+double[] ratings = {3.2, 2.5, 1.7};
+ 
+System.out.println(ratings[1]);
+```
+
+For ArrayLists, bracket notation won’t work. Instead, we use the method get() to access an index:
+
+```java
+ArrayList<String> shoppingCart = new ArrayList<String>();
+ 
+shoppingCart.add("Trench Coat");
+shoppingCart.add("Tweed Houndstooth Hat");
+shoppingCart.add("Magnifying Glass");
+ 
+System.out.println(shoppingCart.get(2));
+```
+
+## Changing a Value
+
+When we were using arrays, we could rewrite entries by using bracket notation to reassign values:
+
+```java
+String[] shoppingCart = {"Trench Coat", "Tweed Houndstooth Hat", "Magnifying Glass"};
+ 
+shoppingCart[0] = "Tweed Cape";
+ 
+// shoppingCart now holds ["Tweed Cape", "Tweed Houndstooth Hat", "Magnifying Glass"]
+```
+
+ArrayList has a slightly different way of doing this, using the set() method:
+
+```java
+ArrayList<String> shoppingCart = new ArrayList<shoppingCart>();
+ 
+shoppingCart.add("Trench Coat");
+shoppingCart.add("Tweed Houndstooth Hat");
+shoppingCart.add("Magnifying Glass");
+ 
+shoppingCart.set(0, "Tweed Cape");
+ 
+// shoppingCart now holds ["Tweed Cape", "Tweed Houndstooth Hat", "Magnifying Glass"]
+```
+
+## Removing a Value
+
+What if we wanted to get rid of an entry altogether? For arrays, we would have to make a completely new array without the value.
+
+Luckily, ArrayLists allow us to remove an item by specifying the index to remove:
+
+```java
+ArrayList<String> shoppingCart = new ArrayList<String>();
+ 
+shoppingCart.add("Trench Coat");
+shoppingCart.add("Tweed Houndstooth Hat");
+shoppingCart.add("Magnifying Glass");
+ 
+shoppingCart.remove(1);
+// shoppingCart now holds ["Trench Coat", "Magnifying Glass"]
+```
+
+## Getting an item's index
+
+What if we had a really large list and wanted to know the position of a certain element in it? For instance, what if we had an ArrayList detectives with the names of fictional detectives in chronological order, and we wanted to know what position "Fletcher" was.
+
+```java
+// detectives holds ["Holmes", "Poirot", "Marple", "Spade", "Fletcher", "Conan", "Ramotswe"];
+System.out.println(detectives.indexOf("Fletcher"));
+
+// 4
+```

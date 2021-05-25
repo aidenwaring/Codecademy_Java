@@ -1,5 +1,31 @@
 # String Methods
 
+The String class has a lot of useful methods to help us perform operations on Strings and data manipulation. 
+We don’t have to import anything to use the String class because it’s apart of the java.lang package which is available by default.
+
+Let's get introduced to:
+
+* length()
+* concat()
+* equals()
+* indexOf()
+* charAt()
+* substring()
+* toUpperCase() / toLowerCase()
+
+## Length
+The length() string method returns the length ⁠— total number of characters ⁠— of a String.
+
+```
+String str = "Hello World!";  
+ 
+System.out.println(str.length());
+
+//12
+```
+
+
+
 ## Concat()
 
 The concat() method concatenates one string to the end of another string.
