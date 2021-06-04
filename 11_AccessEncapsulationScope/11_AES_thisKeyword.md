@@ -52,3 +52,58 @@ this.balanceDollar += balanceDollar;
 }
 ```
  
+Demonstrated above is how `this` works for variables, but we can also use `this` with methods.
+
+```java
+public class Computer{
+  public int brightness;
+  public int volume;
+ 
+  public void setBrightness(int inputBrightness){
+    this.brightness = inputBrightness;
+  }
+ 
+  public void setVolume(int inputVolume){
+    this.volume = inputvolume;
+  }
+ 
+  public void resetSettings(){
+    // resetSettings() method calls other methods using this
+    // in order to do this, it needs an object to call these methods
+    // rather than create a new object, we use this as the object 
+    this.setBrightness(0);
+    this.setVolume(0);
+  }
+
+  public static void main (String[] args) {
+    Computer myComputer = new Computer();
+    myComputer.resetSettings();
+    // Here myComputer is calling resetSettings.
+    // Calling resetSettings() is as iff our object also called
+    // myComputer.setBrightness(0) and myComputer.setVolume(0).
+    // this is a placeholder for whatever object is used from the original method    
+    }
+}
+```
+
+`this` serves as a placeholder for whatever object was used to call the original method.
+
+What this means is that whatever object that calls resetSettings will then also call these methods.
+
+### `this` in methods
+
+A method calling other methods using `this`.
+
+```
+public void pairWithOtherComputer(Computer other){
+  // Code for method that uses the parameter other
+}
+ 
+public void setUpConnection(){
+  // We use "this" to call the method and also pass "this" to the method so it can be used in that method
+  this.pairWithOtherComputer(this);
+}
+```
+
+You're using the current object to call this method (first this) and using the object passed in 
+as the parameter (second this).
