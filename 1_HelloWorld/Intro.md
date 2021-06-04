@@ -199,7 +199,7 @@ The following is printed to the screen:
 
 `Welcome to Java!`
 
-![img3](/assets/img3.png)
+![assets/img3](/assets/img3.png)
 
 ### Java Review: Putting it all together 7/7
 
