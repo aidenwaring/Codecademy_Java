@@ -8,7 +8,7 @@ if they both share the same name.
 
 By default, Java refers to the local variable name.
 
-```angular2
+```
 public Dog(String name){
   this.name = name;
 }
