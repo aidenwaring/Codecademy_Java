@@ -1,9 +1,9 @@
-public class Store {
+public class WelcomeMethod {
     // instance fields
     String productType;
     
     // constructor method
-    public Store(String product) {
+    public WelcomeMethod(String product) {
       productType = product;
     }
     
@@ -14,12 +14,12 @@ public class Store {
     }
   
     public void greetCustomer(String customer) {
-      System.out.println("Welcome to the store, " + customer + "!");
+      System.out.println("Welcome to the WelcomeMethod, " + customer + "!");
     }
     
     // main method
     public static void main(String[] args) {
-      Store lemonadeStand = new Store("Lemonade");
+      WelcomeMethod lemonadeStand = new WelcomeMethod("Lemonade");
       lemonadeStand.greetCustomer("Aidos");
     }
   }

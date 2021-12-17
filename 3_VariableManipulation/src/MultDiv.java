@@ -1,4 +1,4 @@
-public class MultAndDivide {
+public class MultDiv {
 	public static void main(String[] args) {   
 		double subtotal = 30;
         double tax = 0.0875;

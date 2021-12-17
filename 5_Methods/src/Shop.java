@@ -1,28 +1,26 @@
-public class Store {
+public class Shop {
     // instance fields
     String productType;
     double price;
     
     // constructor method
-    public Store(String product, double initialPrice) {
+    public Shop(String product, double initialPrice) {
       productType = product;
       price = initialPrice;
     }
     
     // increase price method
     public void increasePrice(double priceToAdd){
-      double newPrice = price + priceToAdd;
-      price = newPrice;
+      price += priceToAdd;
     }
     
     // get price with tax method
     public double getPriceWithTax() {
-      double totalPrice = price + price * 0.08;
-      return totalPrice;
+      return price + price * 0.08;
     }
     // main method
     public static void main(String[] args) {
-      Store lemonadeStand = new Store("Lemonade", 3.75);
+      Shop lemonadeStand = new Shop("Lemonade", 3.75);
     double lemonadePrice = lemonadeStand.getPriceWithTax();
     System.out.println(lemonadePrice);
     }

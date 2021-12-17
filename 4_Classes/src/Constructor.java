@@ -1,5 +1,5 @@
 public class Constructor {
-    public Car() {
+    public Constructor() {
     //constructor method starts after curly brace
   
       //instructions for creating a Car instance

@@ -1,9 +1,9 @@
-public class Store {
+public class AdvertiseMethod {
     // instance fields
     String productType;
     
     // constructor method
-    public Store(String product) {
+    public AdvertiseMethod(String product) {
       productType = product;
     }
     
@@ -15,7 +15,7 @@ public class Store {
     
     // main method
     public static void main(String[] args) {
-      Store lemonadeStand = new Store("Lemonade");
+      AdvertiseMethod lemonadeStand = new AdvertiseMethod("Lemonade");
       lemonadeStand.advertise();
     }
   }
